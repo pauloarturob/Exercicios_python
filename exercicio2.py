@@ -15,11 +15,13 @@ G = 'Grande'
 acumulador = int(0)
 while True:
     tamanho = input('Escolha o tamanho do pote (P/M/G): ') # estrada do usuário para escolher tamanho do pote
+    tamanho = tamanho.upper()
     if tamanho != 'P' and tamanho != 'M' and tamanho != 'G':
         print(f"Você digitou '{tamanho}' esse é TAMANHO invalido!!!!\n"
               f">TENTE NOVAMENTE<")
         continue # Faz com que o usuário retorne para digitar corretamente
     cod = input('Escolha o cod do sabor desejado (TR/ES/PR): ') # estrada do usuário para escolher sabor
+    cod = cod.upper()
     if cod != 'TR' and cod != 'ES' and cod != 'PR':
         print(f"Você digitou '{cod}' e esse CÓDIGO é invalido!!!!\n"
               f">TENTE NOVAMENTE<")
@@ -91,6 +93,7 @@ while True:
         acumulador = acumulador + 24   # os acumuladores de preço para gerar a soma e o valor final
 
     maisPedidos = input('Gostaria de realizar mais pedidos? (S/N): ') # entrada para o usuário caso queira continuar seu pedido, caso não ele finaliza e ja da o o valor total
+    maisPedidos = maisPedidos.upper()
     if maisPedidos == 'S':
         continue # Faz com que o usuário continue comprando
     else:
